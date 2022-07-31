@@ -16,9 +16,7 @@ export default function Home({ title = "Meu Titulo" }: props) {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          {title}
-        </h1>
+        <h1 className={styles.title}>{title}</h1>
 
         <p className={styles.description}>
           Get started by editing{" "}
@@ -27,7 +25,7 @@ export default function Home({ title = "Meu Titulo" }: props) {
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>  {title} &rarr;</h2>
+            <h2> {title} &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
