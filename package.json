@@ -7,7 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "eslint": "eslint src"
+    "eslint": "eslint src --max-warnings=0",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint --fix"
+    ]
   },
   "dependencies": {
     "next": "12.1.6",
@@ -25,6 +33,9 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "pinst": "^3.0.0",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   }
